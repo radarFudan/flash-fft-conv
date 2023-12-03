@@ -4,7 +4,8 @@ from torch.utils.cpp_extension import BuildExtension, CUDAExtension, CUDA_HOME
 import subprocess
 
 def get_last_arch_torch():
-    arch = torch.cuda.get_arch_list()[-1]
+    # arch = torch.cuda.get_arch_list()[-1]
+    arch = "sm_90"
     print(f"Found arch: {arch} from existing torch installation")
     return arch
 
